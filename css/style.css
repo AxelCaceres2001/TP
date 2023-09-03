@@ -1,0 +1,325 @@
+:root {
+    --barlow: 'Barlow Condensed', sans-serif;;
+
+    --violet-black: #242038;
+    --violet: #8D86C9;
+    --violet-light: #9067C6;
+    --viotet-text: #6f6077;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--barlow);
+    background-color: var(--violet-black);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* NAV */
+
+.hero__nav {
+    width: 50%;
+    height: 150px;
+    padding: 20px 50px;
+    position: fixed;
+    background-color: var(--violet-black);
+    z-index: 100;
+}
+
+.nav__logo {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--violet-light);
+}
+
+.nav__links {
+    margin-top: 15px;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:600;
+    color: #ffff;
+    margin-right: 20px;
+    padding: 5px 0;
+}
+
+.nav__link:hover {
+    color: var(--violet-light);
+    border-bottom: 5px solid var(--violet-light);
+}
+
+/**/
+
+/* SECTION HOME*/
+
+.section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.section__info {
+    display: flex;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    line-height: 1;
+    padding-left: 150px;
+}
+
+.section__name {
+    color: var(--violet);
+    font-size: 150px;
+}
+
+.section__surname {
+    color: var(--violet-light);
+    font-size: 150px;
+}
+
+.section__foot {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--viotet-text);
+}
+
+.section__picture__perfil {
+    width: 50%;
+    height: 100%;
+}
+
+.section__img__perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.networks__links {
+    margin-top: 25px;
+    display: flex;
+}
+
+.networks__link {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.networks__link--linkedin {
+    background-image: url(/img/linkedin_icon+.svg);
+}
+
+.networks__link--instagram {
+    background-image: url(/img/instagram_icon.svg);
+}
+
+.networks__link--facebook {
+    background-image: url(/img/facebook_icon.svg);
+
+}
+
+/**/
+
+/* SECTION BIO*/
+
+.section--bio {
+    padding: 20px;
+    background-color: #8D86C9;
+    align-items: center;
+}
+
+.section__content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section__picture__draw {
+    width: 40%;
+    height: 100%;;
+}
+
+.section__img__draw {
+    width: 100%;
+    height: 100%;
+}
+
+.section__biography {
+    width: 40%;
+    height: 90%;
+    background-color: #ffff;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 1.5;
+    overflow: auto;
+}
+
+.subtitle {
+    font-size: 40px;
+    color: #242038;
+}
+
+.paragraph {
+    margin-top: 50px;
+    font-size: 20px;
+    color: #242038;
+}
+
+/**/
+
+/* SECTION CLIENTS*/
+
+.section--clients {
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 50px;
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--violet-light);
+}
+
+.slide__items {
+    width: 50%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(56%) sepia(20%) saturate(2900%) hue-rotate(210deg) brightness(54%) contrast(150%);
+}
+
+
+/**/
+
+/* MEDIAS QUERYS*/
+
+@media screen and (max-width: 1280px) {
+    .section__name {
+        font-size: 120px;
+    }
+    
+    .section__surname {
+        font-size: 120px;
+    }
+
+    .section__foot {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .section__info {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .section__info {
+        padding-left: 50px;
+    }
+
+    .section__name {
+        font-size: 90px;
+    }
+    
+    .section__surname {
+        font-size: 90px;
+    }
+
+    .hero__nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .section__info {
+        padding-left: 50px;
+    }
+
+    .section__name {
+        font-size: 70px;
+    }
+    
+    .section__surname {
+        font-size: 70px;
+    }
+
+    .section__content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .section__info {
+        padding-left: 50px;
+    }
+
+    .section__name {
+        font-size: 50px;
+    }
+    
+    .section__surname {
+        font-size: 50px;
+    }
+
+    .section__foot {
+        font-size: 12px;
+    }
+
+    .networks__links {
+        flex-direction: column;
+    }
+
+    .networks__link {
+        width: 30px;
+        height: 30px;
+        margin-top: 20px;
+    }
+
+    .section__content {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .section__picture__draw {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section__biography {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .section__info {
+        padding-left: 20px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
